@@ -56,7 +56,6 @@ class scenedesc():
 	    next_words = []
 	    images = []
 	    total_count = 0
-	    gen_count = 0
 	    while 1:
 		    image_counter = -1
 		    for caption in self.captions:
@@ -76,8 +75,7 @@ class scenedesc():
 		                images = np.asarray(images)
 		                partial_captions = sequence.pad_sequences(partial_captions, maxlen=self.max_length, padding='post')
 		                total_count = 0
-		                gen_count+=1
-                        	print ("yielding count: "+str(gen_count))
+		                
 		                yield [[images, partial_captions], next_words]
 		                partial_captions = []
 		                next_words = []
