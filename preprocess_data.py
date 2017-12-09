@@ -16,7 +16,7 @@ def preprocessing():
 	train_imgs_captions = open("Flickr8K_Text/trainimgs.txt",'wb')
 	for img_id in train_imgs_id:
 		for captions in caption[img_id]:
-			desc = "<start>"+captions+"<end>"
+			desc = "<start> "+captions+"<end>"
 			train_imgs_captions.write(img_id+"\t"+desc+"\n")
 			train_imgs_captions.flush()
 	train_imgs_captions.close()
@@ -26,7 +26,7 @@ def preprocessing():
 	test_imgs_captions = open("Flickr8K_Text/testimgs.txt",'wb')
 	for img_id in test_imgs_id:
 		for captions in caption[img_id]:
-			desc = "<start>"+captions+"<end>"
+			desc = "<start> "+captions+"<end>"
 			test_imgs_captions.write(img_id+"\t"+desc+"\n")
 			test_imgs_captions.flush()
 	test_imgs_captions.close()
