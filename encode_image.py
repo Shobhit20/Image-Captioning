@@ -5,6 +5,11 @@ from imagenet_utils import preprocess_input
 import six.moves.cPickle as pickle
 
 
+def model_gen():
+	model = VGG16(weights='imagenet', include_top=True, input_shape = (224, 224, 3))
+	return model
+
+
 def encodings(model, path):
 	processed_img = image.load_img(path, target_size=(224,224))
 	x = image.img_to_array(processed_img)
