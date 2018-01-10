@@ -65,4 +65,4 @@ https://drive.google.com/drive/folders/1aukgi_3xtuRkcQGoyAaya5pP4aoDzl7r
 #### Code reference
 https://github.com/anuragmishracse/caption_generator
 
-You can find a detailed report in the Report folder
+You can find a detailed report in the Report folder.
